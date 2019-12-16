@@ -1,0 +1,93 @@
+@import "nullstyle.scss";
+
+%roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.articles {
+  background-color: #f8f8f8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.title {
+  color: #dfecf2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.26px;
+  -webkit-transform: rotate(-90deg); //Chrome, Safari
+  -moz-transform: rotate(-90deg); //Firefox
+  -o-transform: rotate(-90deg); //Opera
+  -ms-transform: rotate(-90deg); //IE
+  transform: rotate(-90deg); //браузеры без префексов
+  position: absolute;
+  left: 180px;
+  top: 395px;
+}
+
+.container {
+  background-color: #fff;
+  width: 1215px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 45px;
+}
+
+.article-preview {
+  width: 25%;
+  padding: 0 30px;
+  @extend %roboto;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #e5e5e5;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.headline {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-preiview__title {
+  font-weight: 400;
+}
+
+time {
+  color: #848484;
+  font-weight: 300;
+}
+
+.article-preview__text {
+  overflow-y: hidden;
+  max-height: 80px;
+  padding-right: 10px;
+}
+
+/* хром, сафари */
+.element::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ie 10+ */
+.element {
+  -ms-overflow-style: none;
+}
